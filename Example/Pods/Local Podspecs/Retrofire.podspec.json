@@ -1,0 +1,22 @@
+{
+  "name": "Retrofire",
+  "version": "0.1.0",
+  "summary": "A short description of Retrofire.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/dcoletto/Retrofire",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "dcoletto": "d.coletto@eggonemail.com"
+  },
+  "source": {
+    "git": "https://github.com/dcoletto/Retrofire.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "Retrofire/Classes/**/*"
+}

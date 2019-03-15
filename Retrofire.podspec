@@ -9,26 +9,23 @@
 Pod::Spec.new do |s|
   s.name             = 'Retrofire'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of Retrofire.'
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
+  s.summary          = 'A type-safe HTTP client for Swift, inspired to Retrofit'
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+  Protocol-based networking (with a bit of Sourcery) used to generate statically typed API Client;
+  This library is inspired to the JVM library Retrofit and is a wrapper for Alamofire (hence the name).
+  You will need to create a Protocol describing your APIs, then Sourcery will generate the actual Alamofire code
                        DESC
 
   s.homepage         = 'https://github.com/dcoletto/Retrofire'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'dcoletto' => 'd.coletto@eggonemail.com' }
+  s.author           = { 'Coletto Dario' => 'dcoletto.sw@gmail.com' }
   s.source           = { :git => 'https://github.com/dcoletto/Retrofire.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.social_media_url = 'https://twitter.com/coletzLp'
 
   s.ios.deployment_target = '8.0'
+  s.swift_version = '4.0'
 
   s.source_files = 'Retrofire/Classes/**/*'
   
@@ -38,5 +35,5 @@ TODO: Add long description of the pod here.
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency 'Alamofire'
 end
