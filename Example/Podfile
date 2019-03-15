@@ -1,7 +1,8 @@
 use_frameworks!
 
 target 'RetrofireSwift_Example' do
-  pod 'RetrofireSwift', :path => '../'
+  #pod 'RetrofireSwift', :path => '../' # Use this while developing
+  pod 'RetrofireSwift', '0.1.1-test' # Use this to test pod on Cocoapods.org
 
   target 'RetrofireSwift_Tests' do
     inherit! :search_paths

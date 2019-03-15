@@ -14,7 +14,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Installation
 
-Retrofire is available through [CocoaPods](https://cocoapods.org). To install
+RetrofireSwift is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
@@ -23,7 +23,7 @@ pod 'RetrofireSwift'
 
 ## Author
 
-dcoletto, d.coletto@eggonemail.com
+Coletto Dario, dcoletto.sw@gmail.com
 
 ## License
 
