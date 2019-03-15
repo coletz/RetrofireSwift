@@ -1,9 +1,9 @@
 use_frameworks!
 
-target 'Retrofire_Example' do
-  pod 'Retrofire', :path => '../'
+target 'RetrofireSwift_Example' do
+  pod 'RetrofireSwift', :path => '../'
 
-  target 'Retrofire_Tests' do
+  target 'RetrofireSwift_Tests' do
     inherit! :search_paths
 
     pod 'Quick', '~> 1.2.0'

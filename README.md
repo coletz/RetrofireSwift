@@ -1,9 +1,8 @@
-# Retrofire
+# RetrofireSwift
 
-[![CI Status](https://img.shields.io/travis/dcoletto/Retrofire.svg?style=flat)](https://travis-ci.org/dcoletto/Retrofire)
-[![Version](https://img.shields.io/cocoapods/v/Retrofire.svg?style=flat)](https://cocoapods.org/pods/Retrofire)
-[![License](https://img.shields.io/cocoapods/l/Retrofire.svg?style=flat)](https://cocoapods.org/pods/Retrofire)
-[![Platform](https://img.shields.io/cocoapods/p/Retrofire.svg?style=flat)](https://cocoapods.org/pods/Retrofire)
+[![Version](https://img.shields.io/cocoapods/v/RetrofireSwift.svg?style=flat)](https://cocoapods.org/pods/RetrofireSwift)
+[![License](https://img.shields.io/cocoapods/l/RetrofireSwift.svg?style=flat)](https://cocoapods.org/pods/RetrofireSwift)
+[![Platform](https://img.shields.io/cocoapods/p/RetrofireSwift.svg?style=flat)](https://cocoapods.org/pods/RetrofireSwift)
 
 WOOOOOPS! THIS IS 100% WORK IN PROGRESS!!! NOTHING IS WORKING NOW!!!
 
@@ -19,7 +18,7 @@ Retrofire is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'Retrofire'
+pod 'RetrofireSwift'
 ```
 
 ## Author

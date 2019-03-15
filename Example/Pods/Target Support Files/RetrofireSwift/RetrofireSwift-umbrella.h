@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double RetrofireVersionNumber;
-FOUNDATION_EXPORT const unsigned char RetrofireVersionString[];
+FOUNDATION_EXPORT double RetrofireSwiftVersionNumber;
+FOUNDATION_EXPORT const unsigned char RetrofireSwiftVersionString[];
 

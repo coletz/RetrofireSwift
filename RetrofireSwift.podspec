@@ -7,7 +7,7 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = 'Retrofire'
+  s.name             = 'RetrofireSwift'
   s.version          = '0.1.0'
   s.summary          = 'A type-safe HTTP client for Swift, inspired to Retrofit'
 
@@ -17,18 +17,18 @@ Pod::Spec.new do |s|
   You will need to create a Protocol describing your APIs, then Sourcery will generate the actual Alamofire code
                        DESC
 
-  s.homepage         = 'https://github.com/dcoletto/Retrofire'
+  s.homepage         = 'https://github.com/dcoletto/RetrofireSwift'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Coletto Dario' => 'dcoletto.sw@gmail.com' }
-  s.source           = { :git => 'https://github.com/dcoletto/Retrofire.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/dcoletto/RetrofireSwift.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/coletzLp'
 
   s.ios.deployment_target = '8.0'
   s.swift_version = '4.0'
 
-  s.source_files = 'Retrofire/Classes/*.swift'
-  s.preserve_paths = 'Retrofire/Templates', 'sourcery'
+  s.source_files = 'RetrofireSwift/Classes/*.swift'
+  s.preserve_paths = 'RetrofireSwift/Templates', 'sourcery'
   
   # s.resource_bundles = {
   #   'Retrofire' => ['Retrofire/Assets/*.png']

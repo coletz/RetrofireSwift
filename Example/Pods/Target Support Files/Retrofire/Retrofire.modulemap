@@ -1,6 +1,0 @@
-framework module Retrofire {
-  umbrella header "Retrofire-umbrella.h"
-
-  export *
-  module * { export * }
-}

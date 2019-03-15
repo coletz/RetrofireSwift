@@ -2,7 +2,7 @@
 
 import Quick
 import Nimble
-import Retrofire
+import RetrofireSwift
 
 class TableOfContentsSpec: QuickSpec {
     override func spec() {

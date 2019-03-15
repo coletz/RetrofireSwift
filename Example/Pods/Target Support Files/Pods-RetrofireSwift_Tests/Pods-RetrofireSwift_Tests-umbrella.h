@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_Retrofire_ExampleVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_Retrofire_ExampleVersionString[];
+FOUNDATION_EXPORT double Pods_RetrofireSwift_TestsVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_RetrofireSwift_TestsVersionString[];
 

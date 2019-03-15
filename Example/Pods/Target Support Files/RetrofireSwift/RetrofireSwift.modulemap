@@ -1,0 +1,6 @@
+framework module RetrofireSwift {
+  umbrella header "RetrofireSwift-umbrella.h"
+
+  export *
+  module * { export * }
+}

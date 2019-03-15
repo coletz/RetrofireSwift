@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		15F9B54D87736C550016FC8E /* Pods_RetrofireSwift_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08DCF02E3050680D457691BB /* Pods_RetrofireSwift_Example.framework */; };
+		55892624BBF58F003503DF47 /* Pods_RetrofireSwift_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C459157854FA5B2FB14CDD38 /* Pods_RetrofireSwift_Tests.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -28,25 +30,31 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		024666E4BBC6E4F1E8FB5251 /* Pods-RetrofireSwift_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RetrofireSwift_Tests.release.xcconfig"; path = "Target Support Files/Pods-RetrofireSwift_Tests/Pods-RetrofireSwift_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		08DCF02E3050680D457691BB /* Pods_RetrofireSwift_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RetrofireSwift_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		39D9648CEBA02A71014622A5 /* Pods_Retrofire_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Retrofire_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5177394611DE9144C336297D /* Pods-Retrofire_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Retrofire_Example.release.xcconfig"; path = "Target Support Files/Pods-Retrofire_Example/Pods-Retrofire_Example.release.xcconfig"; sourceTree = "<group>"; };
-		607FACD01AFB9204008FA782 /* Retrofire_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Retrofire_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		607FACD01AFB9204008FA782 /* RetrofireSwift_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RetrofireSwift_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		607FACD71AFB9204008FA782 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		607FACE51AFB9204008FA782 /* Retrofire_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Retrofire_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		607FACE51AFB9204008FA782 /* RetrofireSwift_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RetrofireSwift_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		6138C3066816B9CAE50C423A /* Pods-Retrofire_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Retrofire_Tests.debug.xcconfig"; path = "Target Support Files/Pods-Retrofire_Tests/Pods-Retrofire_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		6AAF3F0B119EF9629F7EDC7F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		82F3AAF11D7B7F0B5DF912BC /* Pods-Retrofire_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Retrofire_Tests.release.xcconfig"; path = "Target Support Files/Pods-Retrofire_Tests/Pods-Retrofire_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		B33F5141F9A50F33091A6074 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		B41C920EFDD23470BD745203 /* Pods-RetrofireSwift_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RetrofireSwift_Example.release.xcconfig"; path = "Target Support Files/Pods-RetrofireSwift_Example/Pods-RetrofireSwift_Example.release.xcconfig"; sourceTree = "<group>"; };
+		C459157854FA5B2FB14CDD38 /* Pods_RetrofireSwift_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RetrofireSwift_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D06CC0F8AA16CAF91D592927 /* Pods-Retrofire_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Retrofire_Example.debug.xcconfig"; path = "Target Support Files/Pods-Retrofire_Example/Pods-Retrofire_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		D3D9641F9FA235C9D17426EE /* Pods-RetrofireSwift_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RetrofireSwift_Tests.debug.xcconfig"; path = "Target Support Files/Pods-RetrofireSwift_Tests/Pods-RetrofireSwift_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		DC13C65C60C85F11DBCDD1C0 /* Pods_Retrofire_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Retrofire_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FA8AEB1F0BF5BCDD5A145B48 /* Retrofire.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Retrofire.podspec; path = ../Retrofire.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		DDE0A6C57AF119AD7E845541 /* Pods-RetrofireSwift_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RetrofireSwift_Example.debug.xcconfig"; path = "Target Support Files/Pods-RetrofireSwift_Example/Pods-RetrofireSwift_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		FA8AEB1F0BF5BCDD5A145B48 /* RetrofireSwift.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = RetrofireSwift.podspec; path = ../RetrofireSwift.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +63,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA77F3CFB7BF10E9E350264B /* Pods_Retrofire_Example.framework in Frameworks */,
+				15F9B54D87736C550016FC8E /* Pods_RetrofireSwift_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +72,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF42844CC5D79CF11EF6BF8B /* Pods_Retrofire_Tests.framework in Frameworks */,
+				55892624BBF58F003503DF47 /* Pods_RetrofireSwift_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,7 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
-				607FACD21AFB9204008FA782 /* Example for Retrofire */,
+				607FACD21AFB9204008FA782 /* Example for RetrofireSwift */,
 				607FACE81AFB9204008FA782 /* Tests */,
 				607FACD11AFB9204008FA782 /* Products */,
 				993566AD6C8C41F6C9EDF8CF /* Pods */,
@@ -84,13 +94,13 @@
 		607FACD11AFB9204008FA782 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				607FACD01AFB9204008FA782 /* Retrofire_Example.app */,
-				607FACE51AFB9204008FA782 /* Retrofire_Tests.xctest */,
+				607FACD01AFB9204008FA782 /* RetrofireSwift_Example.app */,
+				607FACE51AFB9204008FA782 /* RetrofireSwift_Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		607FACD21AFB9204008FA782 /* Example for Retrofire */ = {
+		607FACD21AFB9204008FA782 /* Example for RetrofireSwift */ = {
 			isa = PBXGroup;
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
@@ -100,8 +110,8 @@
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 			);
-			name = "Example for Retrofire";
-			path = Retrofire;
+			name = "Example for RetrofireSwift";
+			path = RetrofireSwift;
 			sourceTree = "<group>";
 		};
 		607FACD31AFB9204008FA782 /* Supporting Files */ = {
@@ -132,7 +142,7 @@
 		607FACF51AFB993E008FA782 /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
-				FA8AEB1F0BF5BCDD5A145B48 /* Retrofire.podspec */,
+				FA8AEB1F0BF5BCDD5A145B48 /* RetrofireSwift.podspec */,
 				6AAF3F0B119EF9629F7EDC7F /* README.md */,
 				B33F5141F9A50F33091A6074 /* LICENSE */,
 			);
@@ -146,6 +156,10 @@
 				5177394611DE9144C336297D /* Pods-Retrofire_Example.release.xcconfig */,
 				6138C3066816B9CAE50C423A /* Pods-Retrofire_Tests.debug.xcconfig */,
 				82F3AAF11D7B7F0B5DF912BC /* Pods-Retrofire_Tests.release.xcconfig */,
+				DDE0A6C57AF119AD7E845541 /* Pods-RetrofireSwift_Example.debug.xcconfig */,
+				B41C920EFDD23470BD745203 /* Pods-RetrofireSwift_Example.release.xcconfig */,
+				D3D9641F9FA235C9D17426EE /* Pods-RetrofireSwift_Tests.debug.xcconfig */,
+				024666E4BBC6E4F1E8FB5251 /* Pods-RetrofireSwift_Tests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -155,6 +169,8 @@
 			children = (
 				39D9648CEBA02A71014622A5 /* Pods_Retrofire_Example.framework */,
 				DC13C65C60C85F11DBCDD1C0 /* Pods_Retrofire_Tests.framework */,
+				08DCF02E3050680D457691BB /* Pods_RetrofireSwift_Example.framework */,
+				C459157854FA5B2FB14CDD38 /* Pods_RetrofireSwift_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -162,9 +178,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		607FACCF1AFB9204008FA782 /* Retrofire_Example */ = {
+		607FACCF1AFB9204008FA782 /* RetrofireSwift_Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "Retrofire_Example" */;
+			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "RetrofireSwift_Example" */;
 			buildPhases = (
 				DF7B48A34FB2AE32F9C14D45 /* [CP] Check Pods Manifest.lock */,
 				5B5AB8DE223BBEA8002F8FAF /* Retrofire */,
@@ -177,14 +193,14 @@
 			);
 			dependencies = (
 			);
-			name = Retrofire_Example;
+			name = RetrofireSwift_Example;
 			productName = Retrofire;
-			productReference = 607FACD01AFB9204008FA782 /* Retrofire_Example.app */;
+			productReference = 607FACD01AFB9204008FA782 /* RetrofireSwift_Example.app */;
 			productType = "com.apple.product-type.application";
 		};
-		607FACE41AFB9204008FA782 /* Retrofire_Tests */ = {
+		607FACE41AFB9204008FA782 /* RetrofireSwift_Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "Retrofire_Tests" */;
+			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "RetrofireSwift_Tests" */;
 			buildPhases = (
 				56C203FEC3B9B0FA3D78ADC0 /* [CP] Check Pods Manifest.lock */,
 				607FACE11AFB9204008FA782 /* Sources */,
@@ -197,9 +213,9 @@
 			dependencies = (
 				607FACE71AFB9204008FA782 /* PBXTargetDependency */,
 			);
-			name = Retrofire_Tests;
+			name = RetrofireSwift_Tests;
 			productName = Tests;
-			productReference = 607FACE51AFB9204008FA782 /* Retrofire_Tests.xctest */;
+			productReference = 607FACE51AFB9204008FA782 /* RetrofireSwift_Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -225,7 +241,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "Retrofire" */;
+			buildConfigurationList = 607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "RetrofireSwift" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -238,8 +254,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				607FACCF1AFB9204008FA782 /* Retrofire_Example */,
-				607FACE41AFB9204008FA782 /* Retrofire_Tests */,
+				607FACCF1AFB9204008FA782 /* RetrofireSwift_Example */,
+				607FACE41AFB9204008FA782 /* RetrofireSwift_Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -280,7 +296,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Retrofire_Tests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-RetrofireSwift_Tests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -303,7 +319,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "ls \"$PODS_ROOT\"\n\n./sourcery/sourcery --config sourcery.yml\n";
+			shellScript = "#ls \"$PODS_ROOT\"\n\n#./sourcery/sourcery --config sourcery.yml\n";
 		};
 		9E4958B06CED5FDA57A49847 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -313,7 +329,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Retrofire_Tests/Pods-Retrofire_Tests-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-RetrofireSwift_Tests/Pods-RetrofireSwift_Tests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
 				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
 			);
@@ -326,7 +342,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Retrofire_Tests/Pods-Retrofire_Tests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RetrofireSwift_Tests/Pods-RetrofireSwift_Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		CF86A2D45CA76227566F7BF3 /* [CP] Embed Pods Frameworks */ = {
@@ -337,20 +353,20 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Retrofire_Example/Pods-Retrofire_Example-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-RetrofireSwift_Example/Pods-RetrofireSwift_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/Retrofire/Retrofire.framework",
+				"${BUILT_PRODUCTS_DIR}/RetrofireSwift/RetrofireSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Retrofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RetrofireSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Retrofire_Example/Pods-Retrofire_Example-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RetrofireSwift_Example/Pods-RetrofireSwift_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DF7B48A34FB2AE32F9C14D45 /* [CP] Check Pods Manifest.lock */ = {
@@ -368,7 +384,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Retrofire_Example-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-RetrofireSwift_Example-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -400,7 +416,7 @@
 /* Begin PBXTargetDependency section */
 		607FACE71AFB9204008FA782 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 607FACCF1AFB9204008FA782 /* Retrofire_Example */;
+			target = 607FACCF1AFB9204008FA782 /* RetrofireSwift_Example */;
 			targetProxy = 607FACE61AFB9204008FA782 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -526,11 +542,11 @@
 		};
 		607FACF01AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D06CC0F8AA16CAF91D592927 /* Pods-Retrofire_Example.debug.xcconfig */;
+			baseConfigurationReference = DDE0A6C57AF119AD7E845541 /* Pods-RetrofireSwift_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = N7RZUJ239L;
-				INFOPLIST_FILE = Retrofire/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/RetrofireSwift/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
@@ -542,11 +558,11 @@
 		};
 		607FACF11AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5177394611DE9144C336297D /* Pods-Retrofire_Example.release.xcconfig */;
+			baseConfigurationReference = B41C920EFDD23470BD745203 /* Pods-RetrofireSwift_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = N7RZUJ239L;
-				INFOPLIST_FILE = Retrofire/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/RetrofireSwift/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
@@ -558,7 +574,7 @@
 		};
 		607FACF31AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6138C3066816B9CAE50C423A /* Pods-Retrofire_Tests.debug.xcconfig */;
+			baseConfigurationReference = D3D9641F9FA235C9D17426EE /* Pods-RetrofireSwift_Tests.debug.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = N7RZUJ239L;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -575,13 +591,13 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Retrofire_Example.app/Retrofire_Example";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RetrofireSwift_Example.app/RetrofireSwift_Example";
 			};
 			name = Debug;
 		};
 		607FACF41AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 82F3AAF11D7B7F0B5DF912BC /* Pods-Retrofire_Tests.release.xcconfig */;
+			baseConfigurationReference = 024666E4BBC6E4F1E8FB5251 /* Pods-RetrofireSwift_Tests.release.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = N7RZUJ239L;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -594,14 +610,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Retrofire_Example.app/Retrofire_Example";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RetrofireSwift_Example.app/RetrofireSwift_Example";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "Retrofire" */ = {
+		607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "RetrofireSwift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				607FACED1AFB9204008FA782 /* Debug */,
@@ -610,7 +626,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "Retrofire_Example" */ = {
+		607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "RetrofireSwift_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				607FACF01AFB9204008FA782 /* Debug */,
@@ -619,7 +635,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "Retrofire_Tests" */ = {
+		607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "RetrofireSwift_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				607FACF31AFB9204008FA782 /* Debug */,
