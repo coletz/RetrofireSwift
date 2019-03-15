@@ -1,0 +1,93 @@
+{% for type in types.implementing.Retrofire %}
+import Alamofire
+
+extension SessionManager {
+
+	{% for method in type.allMethods %}
+	func {{ method.callName }}(
+		{% for param in method.parameters %}
+		{{ param.name }}: {{ param.typeName }},
+		{% endfor %}
+		_ completion: @escaping ({{ method.returnTypeName }}?, RetrofireError?) -> Void
+	){
+
+		{% for k, v in method.annotations %}
+		{% if k == "GET" or k == "POST" or k == "PUT" or k == "PATCH" or k == "DELETE" %}
+		let method: HTTPMethod = .{{ k|lowercase }}
+		{% if method.parameters|annotated:"url"|count == 1 %}
+		{% for param in method.parameters|annotated:"url" %}
+		let url = {{ param.name }}
+		{% endfor %}
+		{% else %}
+		let url = {% if method.annotations.baseUrl %}"${{ method.annotations.baseUrl }}{{ v }}"{% else %} "\(RetrofireConfig.fullUrl){{ v }}"
+		{% endif %}
+		{% endif %}
+		{% endif %}
+		{% endfor %}
+		{% for param in method.parameters|annotated:"path" %}
+			.replacePathParameter(path: "{{ param.name }}", variable: {{ param.name }})
+		{% endfor %}
+		var urlComponent = URLComponents(string: url)!
+		{% if method.parameters|annotated:"query"|count > 0 %}
+		var queryStringParam: [String:String] = [:]
+		{% for param in method.parameters|annotated:"query" %}
+		queryStringParam["{{ param.name }}"] = {{ param.name }}
+		{% endfor %}
+		let queryItems = queryStringParam.map  { URLQueryItem(name: $0.key, value: $0.value) }
+		urlComponent.queryItems = queryItems
+		{% endif %}
+
+		var request = try! URLRequest(url: urlComponent.url!, method: method)
+		
+		{% for param in method.parameters %}
+		{% if param|annotated:"body" %}
+		let body = try! JSONEncoder().encode({{ param.name }})
+		let headers = [ "Content-Type": "application/json" ]
+		request.httpMethod = "POST"
+		request.httpBody = body
+		request.allHTTPHeaderFields = headers
+		{% endif %}
+		{% endfor %}
+		
+		{% if not method.annotations.responseType or method.annotations.responseType == "json"%}
+		self.request(request)
+			.validate(statusCode: 200..<300)
+			.validate(contentType: ["application/json"])
+			.responseJSON { response in
+				guard response.result.isSuccess else {
+					completion(nil, .server(text: String(describing: response.result.error)))
+					return
+				}
+				
+				if let data = response.data {
+					if let jsonObj = try? JSONDecoder().decode({{ method.returnTypeName }}.self, from: data){
+						completion(jsonObj, nil)
+					} else {
+						completion(nil, .unparsableJson)
+					}
+				} else {
+					completion(nil, .emptyResponse)
+				}
+			}
+		{% else %}
+
+		self.request(request)
+			.validate(statusCode: 200..<300)
+			.response{{ method.annotations.responseType|capitalize }} { response in
+				guard response.result.isSuccess else {
+					completion(nil, .server(text: String(describing: response.result.error)))
+					return
+				}
+	            
+	            if let data = response.data {
+	                completion(data, nil)
+	            } else {
+	                completion(nil, .emptyResponse)
+	            }
+	            return
+        }
+		{% endif %}
+	}
+	{% endfor %}
+}
+{% endfor %}

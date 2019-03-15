@@ -167,6 +167,7 @@
 			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "Retrofire_Example" */;
 			buildPhases = (
 				DF7B48A34FB2AE32F9C14D45 /* [CP] Check Pods Manifest.lock */,
+				5B5AB8DE223BBEA8002F8FAF /* Retrofire */,
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
@@ -213,10 +214,12 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = N7RZUJ239L;
 						LastSwiftMigration = 0900;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = N7RZUJ239L;
 						LastSwiftMigration = 0900;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -284,6 +287,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		5B5AB8DE223BBEA8002F8FAF /* Retrofire */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Retrofire;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "ls \"$PODS_ROOT\"\n\n./sourcery/sourcery --config sourcery.yml\n";
+		};
 		9E4958B06CED5FDA57A49847 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -317,12 +338,14 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Retrofire_Example/Pods-Retrofire_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Retrofire/Retrofire.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Retrofire.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -506,6 +529,7 @@
 			baseConfigurationReference = D06CC0F8AA16CAF91D592927 /* Pods-Retrofire_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = N7RZUJ239L;
 				INFOPLIST_FILE = Retrofire/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -521,6 +545,7 @@
 			baseConfigurationReference = 5177394611DE9144C336297D /* Pods-Retrofire_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = N7RZUJ239L;
 				INFOPLIST_FILE = Retrofire/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -535,6 +560,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6138C3066816B9CAE50C423A /* Pods-Retrofire_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = N7RZUJ239L;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -557,6 +583,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 82F3AAF11D7B7F0B5DF912BC /* Pods-Retrofire_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = N7RZUJ239L;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",

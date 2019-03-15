@@ -27,7 +27,8 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '8.0'
   s.swift_version = '4.0'
 
-  s.source_files = 'Retrofire/Classes/**/*'
+  s.source_files = 'Retrofire/Classes/*.swift'
+  s.preserve_paths = 'Retrofire/Templates', 'sourcery'
   
   # s.resource_bundles = {
   #   'Retrofire' => ['Retrofire/Assets/*.png']

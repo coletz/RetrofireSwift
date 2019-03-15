@@ -1,22 +1,33 @@
 {
   "name": "Retrofire",
   "version": "0.1.0",
-  "summary": "A short description of Retrofire.",
-  "description": "TODO: Add long description of the pod here.",
+  "summary": "A type-safe HTTP client for Swift, inspired to Retrofit",
+  "description": "Protocol-based networking (with a bit of Sourcery) used to generate statically typed API Client;\nThis library is inspired to the JVM library Retrofit and is a wrapper for Alamofire (hence the name).\nYou will need to create a Protocol describing your APIs, then Sourcery will generate the actual Alamofire code",
   "homepage": "https://github.com/dcoletto/Retrofire",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "dcoletto": "d.coletto@eggonemail.com"
+    "Coletto Dario": "dcoletto.sw@gmail.com"
   },
   "source": {
     "git": "https://github.com/dcoletto/Retrofire.git",
     "tag": "0.1.0"
   },
+  "social_media_url": "https://twitter.com/coletzLp",
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "Retrofire/Classes/**/*"
+  "swift_version": "4.0",
+  "source_files": "Retrofire/Classes/*.swift",
+  "preserve_paths": [
+    "Retrofire/Templates",
+    "sourcery"
+  ],
+  "dependencies": {
+    "Alamofire": [
+
+    ]
+  }
 }

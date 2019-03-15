@@ -1,0 +1,9 @@
+sources:
+  - Sources/
+templates:
+  - Templates/
+output:
+  Sources/Retrofire/Generated/
+prune: true
+args:
+removePodImport: true

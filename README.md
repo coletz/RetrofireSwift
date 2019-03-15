@@ -5,6 +5,8 @@
 [![License](https://img.shields.io/cocoapods/l/Retrofire.svg?style=flat)](https://cocoapods.org/pods/Retrofire)
 [![Platform](https://img.shields.io/cocoapods/p/Retrofire.svg?style=flat)](https://cocoapods.org/pods/Retrofire)
 
+WOOOOOPS! THIS IS 100% WORK IN PROGRESS!!! NOTHING IS WORKING NOW!!!
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
