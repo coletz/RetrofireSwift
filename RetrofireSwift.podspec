@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'RetrofireSwift'
-  s.version          = '0.1.1'
+  s.version          = '0.1.2'
   s.summary          = 'A type-safe HTTP client for Swift, inspired to Retrofit'
 
   s.description      = <<-DESC
@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
   s.swift_version = '4.0'
 
   s.source_files = 'Sources/*.swift'
-  s.resources = 'Templates/*.stencil'
+  s.resources = [ 'retrofire.sh', 'Templates/*.stencil' ]
   
   # s.resource_bundles = {
   #   'Retrofire' => ['Retrofire/Assets/*.png']
