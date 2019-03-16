@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'RetrofireSwift'
-  s.version          = '0.1.2'
+  s.version          = '0.1.3'
   s.summary          = 'A type-safe HTTP client for Swift, inspired to Retrofit'
 
   s.description      = <<-DESC
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
                        DESC
 
   s.homepage         = 'https://github.com/dcoletto/RetrofireSwift'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+  s.screenshots      = 'https://raw.githubusercontent.com/dcoletto/RetrofireSwift/master/retrofire-sample-usage.png'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Coletto Dario' => 'dcoletto.sw@gmail.com' }
   s.source           = { :git => 'https://github.com/dcoletto/RetrofireSwift.git', :tag => s.version.to_s }
@@ -30,12 +30,6 @@ Pod::Spec.new do |s|
   s.source_files = 'Sources/*.swift'
   s.resources = [ 'retrofire.sh', 'Templates/*.stencil' ]
   
-  # s.resource_bundles = {
-  #   'Retrofire' => ['Retrofire/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
   s.dependency 'Alamofire'
   s.dependency 'Sourcery'
 end

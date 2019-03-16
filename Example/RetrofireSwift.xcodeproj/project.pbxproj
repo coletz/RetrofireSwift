@@ -10,6 +10,7 @@
 		15F9B54D87736C550016FC8E /* Pods_RetrofireSwift_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08DCF02E3050680D457691BB /* Pods_RetrofireSwift_Example.framework */; };
 		55892624BBF58F003503DF47 /* Pods_RetrofireSwift_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C459157854FA5B2FB14CDD38 /* Pods_RetrofireSwift_Tests.framework */; };
 		5B5AB8E4223BEDDE002F8FAF /* Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5AB8E3223BEDDE002F8FAF /* Sample.swift */; };
+		5BEB18FE223D732600C47321 /* RetrofireSourcery.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEB18FD223D732600C47321 /* RetrofireSourcery.generated.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 		08DCF02E3050680D457691BB /* Pods_RetrofireSwift_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RetrofireSwift_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		39D9648CEBA02A71014622A5 /* Pods_RetrofireSwift_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RetrofireSwift_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B5AB8E3223BEDDE002F8FAF /* Sample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample.swift; sourceTree = "<group>"; };
+		5BEB18FD223D732600C47321 /* RetrofireSourcery.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RetrofireSourcery.generated.swift; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* RetrofireSwift_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RetrofireSwift_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +79,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5BEB18FC223D732600C47321 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				5BEB18FD223D732600C47321 /* RetrofireSourcery.generated.swift */,
+			);
+			path = Generated;
+			sourceTree = SOURCE_ROOT;
+		};
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +111,7 @@
 		607FACD21AFB9204008FA782 /* Example for RetrofireSwift */ = {
 			isa = PBXGroup;
 			children = (
+				5BEB18FC223D732600C47321 /* Generated */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
@@ -314,7 +325,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "../retrofire.sh\n";
+			shellScript = "$PODS_ROOT/Sourcery/bin/sourcery \\\n--sources $SRCROOT \\\n--templates ../Templates/RetrofireSourcery.stencil \\\n--output $SRCROOT/Generated/\n";
 		};
 		9E4958B06CED5FDA57A49847 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -394,6 +405,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				5BEB18FE223D732600C47321 /* RetrofireSourcery.generated.swift in Sources */,
 				5B5AB8E4223BEDDE002F8FAF /* Sample.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);

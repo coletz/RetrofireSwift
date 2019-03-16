@@ -1,26 +1,35 @@
-//
-//  ViewController.swift
-//  RetrofireSwift
-//
-//  Created by dcoletto on 03/15/2019.
-//  Copyright (c) 2019 dcoletto. All rights reserved.
-//
-
 import UIKit
 import RetrofireSwift
+import Alamofire
 
 class ViewController: UIViewController {
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        RetrofireConfig.networkProtocol = "https"
+        RetrofireConfig.baseUrl = "api.github.com"
+        RetrofireConfig.port = 443
         
+        SessionManager.default.getRepo(user: "dcoletto") { (repoList, error) in
+            repoList?.forEach { repo in
+                print("Repo \(repo.name) from \(repo.owner.login)")
+            }
+        }
     }
+}
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+protocol Api: Retrofire {
+    // sourcery: GET = /users/{user}/repos
+    func getRepo(
+        /*sourcery: path*/ user: String
+    ) -> [GithubRepo]
+}
 
+struct GithubRepo: Codable {
+    var name: String
+    var owner: GithubUser
+}
+
+struct GithubUser: Codable {
+    var login: String
 }
