@@ -314,7 +314,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "#ls \"$PODS_ROOT\"\n$PODS_ROOT/Sourcery/bin/sourcery --sources $SRCROOT --templates $PODS_ROOT/RetrofireSwift/Templates/RetrofireSourcery.stencil --output $SRCROOT/Generated/\n#./sourcery/sourcery --config sourcery.yml\n";
+			shellScript = "../retrofire.sh\n";
 		};
 		9E4958B06CED5FDA57A49847 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
