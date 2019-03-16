@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-               BuildableName = "Retrofire_Example.app"
-               BlueprintName = "Retrofire_Example"
+               BuildableName = "RetrofireSwift_Example.app"
+               BlueprintName = "RetrofireSwift_Example"
                ReferencedContainer = "container:Retrofire.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -29,8 +29,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "607FACE41AFB9204008FA782"
-               BuildableName = "Retrofire_Tests.xctest"
-               BlueprintName = "Retrofire_Tests"
+               BuildableName = "RetrofireSwift_Tests.xctest"
+               BlueprintName = "RetrofireSwift_Tests"
                ReferencedContainer = "container:Retrofire.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -48,8 +48,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "607FACE41AFB9204008FA782"
-               BuildableName = "Retrofire_Tests.xctest"
-               BlueprintName = "Retrofire_Tests"
+               BuildableName = "RetrofireSwift_Tests.xctest"
+               BlueprintName = "RetrofireSwift_Tests"
                ReferencedContainer = "container:Retrofire.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -58,8 +58,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "Retrofire_Example.app"
-            BlueprintName = "Retrofire_Example"
+            BuildableName = "RetrofireSwift_Example.app"
+            BlueprintName = "RetrofireSwift_Example"
             ReferencedContainer = "container:Retrofire.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -82,8 +82,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "Retrofire_Example.app"
-            BlueprintName = "Retrofire_Example"
+            BuildableName = "RetrofireSwift_Example.app"
+            BlueprintName = "RetrofireSwift_Example"
             ReferencedContainer = "container:Retrofire.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -101,8 +101,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "Retrofire_Example.app"
-            BlueprintName = "Retrofire_Example"
+            BuildableName = "RetrofireSwift_Example.app"
+            BlueprintName = "RetrofireSwift_Example"
             ReferencedContainer = "container:Retrofire.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
