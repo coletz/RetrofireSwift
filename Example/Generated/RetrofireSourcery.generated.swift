@@ -12,8 +12,6 @@ extension SessionManager {
 		_ completion: @escaping ([GithubRepo]?, RetrofireError?) -> Void
 	){
 
-		let method: HTTPMethod = .get
-		let url =  "\(RetrofireConfig.fullUrl)/users/{user}/repos"
 		var urlComponent = URLComponents(string: url)!
 
 		var request = try! URLRequest(url: urlComponent.url!, method: method)
