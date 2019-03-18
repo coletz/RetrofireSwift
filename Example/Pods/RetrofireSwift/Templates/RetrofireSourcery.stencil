@@ -25,13 +25,13 @@ extension SessionManager {
 		{% endif %}
 		{% endif %}
 		{% endfor %}
-		{% for param in method.parameters|annotated:"path" %}
+		{% for param in method.parameters|annotated:"Path" %}
 			.replacePathParameter(path: "{{ param.name }}", variable: {{ param.name }})
 		{% endfor %}
 		var urlComponent = URLComponents(string: url)!
-		{% if method.parameters|annotated:"query"|count > 0 %}
+		{% if method.parameters|annotated:"Query"|count > 0 %}
 		var queryStringParam: [String:String] = [:]
-		{% for param in method.parameters|annotated:"query" %}
+		{% for param in method.parameters|annotated:"Query" %}
 		queryStringParam["{{ param.name }}"] = {{ param.name }}
 		{% endfor %}
 		let queryItems = queryStringParam.map  { URLQueryItem(name: $0.key, value: $0.value) }
@@ -41,7 +41,7 @@ extension SessionManager {
 		var request = try! URLRequest(url: urlComponent.url!, method: method)
 		
 		{% for param in method.parameters %}
-		{% if param|annotated:"body" %}
+		{% if param|annotated:"Body" %}
 		let body = try! JSONEncoder().encode({{ param.name }})
 		let headers = [ "Content-Type": "application/json" ]
 		request.httpMethod = "POST"

@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
   s.swift_version = '4.0'
 
   s.source_files = 'Sources/*.swift'
-  s.resources = [ 'retrofire.sh', 'Templates/*.stencil' ]
+  s.resources = [ 'SourceryForRetrofire.app/**/*', 'retrofire.sh', 'Templates/*.stencil' ]
   
   s.dependency 'Alamofire'
 end
