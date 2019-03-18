@@ -19,9 +19,9 @@ class ViewController: UIViewController {
 }
 
 protocol Api: Retrofire {
-    // sourcery: GET = /users/{user}/repos
+    // @GET = /users/{user}/repos
     func getRepo(
-        /*sourcery: path*/ user: String
+        /* @Path */ user: String
     ) -> [GithubRepo]
 }
 

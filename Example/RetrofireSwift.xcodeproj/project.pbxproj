@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		15F9B54D87736C550016FC8E /* Pods_RetrofireSwift_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08DCF02E3050680D457691BB /* Pods_RetrofireSwift_Example.framework */; };
 		55892624BBF58F003503DF47 /* Pods_RetrofireSwift_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C459157854FA5B2FB14CDD38 /* Pods_RetrofireSwift_Tests.framework */; };
-		5B5AB8E4223BEDDE002F8FAF /* Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5AB8E3223BEDDE002F8FAF /* Sample.swift */; };
 		5BEB18FE223D732600C47321 /* RetrofireSourcery.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEB18FD223D732600C47321 /* RetrofireSourcery.generated.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
@@ -35,7 +34,6 @@
 		024666E4BBC6E4F1E8FB5251 /* Pods-RetrofireSwift_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RetrofireSwift_Tests.release.xcconfig"; path = "Target Support Files/Pods-RetrofireSwift_Tests/Pods-RetrofireSwift_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		08DCF02E3050680D457691BB /* Pods_RetrofireSwift_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RetrofireSwift_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		39D9648CEBA02A71014622A5 /* Pods_RetrofireSwift_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RetrofireSwift_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5B5AB8E3223BEDDE002F8FAF /* Sample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample.swift; sourceTree = "<group>"; };
 		5BEB18FD223D732600C47321 /* RetrofireSourcery.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RetrofireSourcery.generated.swift; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* RetrofireSwift_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RetrofireSwift_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -118,7 +116,6 @@
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
-				5B5AB8E3223BEDDE002F8FAF /* Sample.swift */,
 			);
 			name = "Example for RetrofireSwift";
 			path = RetrofireSwift;
@@ -325,7 +322,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "$PODS_ROOT/Sourcery/bin/sourcery \\\n--sources $SRCROOT \\\n--templates ../Templates/RetrofireSourcery.stencil \\\n--output $SRCROOT/Generated/\n";
+			shellScript = "#$PODS_ROOT/RetrofireSwift/retrofire.sh # release\ncd ..              # development\n./retrofire.sh # development\n";
 		};
 		9E4958B06CED5FDA57A49847 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -406,7 +403,6 @@
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				5BEB18FE223D732600C47321 /* RetrofireSourcery.generated.swift in Sources */,
-				5B5AB8E4223BEDDE002F8FAF /* Sample.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

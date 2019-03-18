@@ -1,5 +1,6 @@
 {% for type in types.implementing.Retrofire %}
 import Alamofire
+import RetrofireSwift
 
 extension SessionManager {
 
