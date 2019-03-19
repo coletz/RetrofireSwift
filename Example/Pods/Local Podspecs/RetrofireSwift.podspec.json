@@ -1,6 +1,6 @@
 {
   "name": "RetrofireSwift",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "summary": "A type-safe HTTP client for Swift, inspired to Retrofit",
   "description": "Protocol-based networking (with a bit of Sourcery) used to generate statically typed API Client;\nThis library is inspired to the JVM library Retrofit and is a wrapper for Alamofire (hence the name).\nYou will need to create a Protocol describing your APIs, then Sourcery will generate the actual Alamofire code",
   "homepage": "https://github.com/dcoletto/RetrofireSwift",
@@ -14,7 +14,7 @@
   },
   "source": {
     "git": "https://github.com/dcoletto/RetrofireSwift.git",
-    "tag": "0.2.1"
+    "tag": "0.3.0"
   },
   "social_media_url": "https://twitter.com/coletzLp",
   "platforms": {
@@ -31,7 +31,7 @@
 
     ],
     "SourceryForRetrofire": [
-      "0.16.0-sfr-3"
+      "0.16.0-sfr-5"
     ]
   }
 }

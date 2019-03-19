@@ -322,7 +322,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "#$PODS_ROOT/RetrofireSwift/retrofire.sh # release\ncd ..              # development\n./retrofire_dev.sh # development\n";
+			shellScript = "\n$PODS_ROOT/RetrofireSwift/retrofire.sh # release\n";
 		};
 		9E4958B06CED5FDA57A49847 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;

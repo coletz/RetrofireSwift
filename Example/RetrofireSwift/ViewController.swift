@@ -10,7 +10,7 @@ class ViewController: UIViewController {
         RetrofireConfig.baseUrl = "api.github.com"
         RetrofireConfig.port = 443
         
-        SessionManager.default.getRepo(user: "dcoletto") { (repoList, error) in
+        SessionManager.default.getRepoRest(user: "dcoletto") { (repoList, error) in
             repoList?.forEach { repo in
                 print("Repo \(repo.name) from \(repo.owner.login)")
             }
@@ -20,9 +20,14 @@ class ViewController: UIViewController {
 
 protocol Api: Retrofire {
     // @GET = /users/{user}/repos
-    func getRepo(
+    func getRepoRest(
         /* @Path */ user: String
-    ) -> [GithubRepo]
+        ) -> [GithubRepo]
+    
+    // sourcery: GET = /users/{user}/repos
+    func getRepoSourcery(
+        /* sourcery: Path */ user: String
+        ) -> [GithubRepo]
 }
 
 struct GithubRepo: Codable {

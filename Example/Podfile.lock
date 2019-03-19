@@ -2,10 +2,10 @@ PODS:
   - Alamofire (4.8.1)
   - Nimble (7.0.3)
   - Quick (1.2.0)
-  - RetrofireSwift (0.2.1):
+  - RetrofireSwift (0.3.0):
     - Alamofire
-    - SourceryForRetrofire (= 0.16.0-sfr-3)
-  - SourceryForRetrofire (0.16.0-sfr-3)
+    - SourceryForRetrofire (= 0.16.0-sfr-5)
+  - SourceryForRetrofire (0.16.0-sfr-5)
 
 DEPENDENCIES:
   - Nimble (~> 7.0.2)
@@ -27,9 +27,9 @@ SPEC CHECKSUMS:
   Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
   Nimble: 7f5a9c447a33002645a071bddafbfb24ea70e0ac
   Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
-  RetrofireSwift: 014a8a8546d76604ccb139315034aa16f6f04b6e
-  SourceryForRetrofire: 2bbe6e853f6dcef42a772b3076e95e25b1c9b2ca
+  RetrofireSwift: 09b1a96c4b1907d3f1ed4fd145b7ed51231b8a18
+  SourceryForRetrofire: 9643d460af1e85cd5b58fc877d93d09039e8d5f2
 
-PODFILE CHECKSUM: 08885d55917666084da9275fa1c947c7994ea8eb
+PODFILE CHECKSUM: f4f21bcffe4d72049642ad164b34fed92a7a0753
 
 COCOAPODS: 1.6.0.rc.2
