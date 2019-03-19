@@ -7,7 +7,7 @@ import RetrofireSwift
 
 extension SessionManager {
 
-	func getRepoRest(
+	func getRepo(
 		user: String,
 		_ completion: @escaping ([GithubRepo]?, RetrofireError?) -> Void
 	){
@@ -37,15 +37,18 @@ extension SessionManager {
 				}
 			}
 	}
-	func getRepoSourcery(
-		user: String,
-		_ completion: @escaping ([GithubRepo]?, RetrofireError?) -> Void
+	func searchRepo(
+		q: String,
+		_ completion: @escaping (RepoList?, RetrofireError?) -> Void
 	){
 
 		let method: HTTPMethod = .get
-		let url =  "\(RetrofireConfig.fullUrl)/users/{user}/repos"
-			.replacePathParameter(path: "user", variable: user)
+		let url =  "\(RetrofireConfig.fullUrl)/search/repositories"
 		var urlComponent = URLComponents(string: url)!
+		var queryStringParam: [String:String] = [:]
+		queryStringParam["q"] = q
+		let queryItems = queryStringParam.map  { URLQueryItem(name: $0.key, value: $0.value) }
+		urlComponent.queryItems = queryItems
 
 		var request = try! URLRequest(url: urlComponent.url!, method: method)
 		self.request(request)
@@ -57,7 +60,7 @@ extension SessionManager {
 					return
 				}
 				if let data = response.data {
-					if let jsonObj = try? JSONDecoder().decode([GithubRepo].self, from: data){
+					if let jsonObj = try? JSONDecoder().decode(RepoList.self, from: data){
 						completion(jsonObj, nil)
 					} else {
 						completion(nil, .unparsableJson)

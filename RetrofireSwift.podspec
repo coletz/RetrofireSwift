@@ -9,11 +9,11 @@
 Pod::Spec.new do |s|
   s.name             = 'RetrofireSwift'
   s.version          = '0.3.0'
-  s.summary          = 'A type-safe HTTP client for Swift, inspired to Retrofit'
+  s.summary          = 'A type-safe HTTP client for Swift, inspired by Retrofit'
 
   s.description      = <<-DESC
   Protocol-based networking (with a bit of Sourcery) used to generate statically typed API Client;
-  This library is inspired to the JVM library Retrofit and is a wrapper for Alamofire (hence the name).
+  This library is inspired by the JVM library Retrofit and is a sort of wrapper for Alamofire (hence the name).
   You will need to create a Protocol describing your APIs, then Sourcery will generate the actual Alamofire code
                        DESC
 

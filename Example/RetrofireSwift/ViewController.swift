@@ -10,8 +10,18 @@ class ViewController: UIViewController {
         RetrofireConfig.baseUrl = "api.github.com"
         RetrofireConfig.port = 443
         
-        SessionManager.default.getRepoRest(user: "dcoletto") { (repoList, error) in
+        let username = "dcoletto"
+        SessionManager.default.getRepo(user: username) { (repoList, error) in
+            print("\n=== Repositories of '\(username)'")
             repoList?.forEach { repo in
+                print("Repo \(repo.name)")
+            }
+        }
+        
+        let query = "retrofire swift"
+        SessionManager.default.searchRepo(q: query) { (container, error) in
+            print("\n=== Repositories containing '\(query)'")
+            container?.items.forEach { repo in
                 print("Repo \(repo.name) from \(repo.owner.login)")
             }
         }
@@ -20,14 +30,18 @@ class ViewController: UIViewController {
 
 protocol Api: Retrofire {
     // @GET = /users/{user}/repos
-    func getRepoRest(
+    func getRepo(
         /* @Path */ user: String
         ) -> [GithubRepo]
     
-    // sourcery: GET = /users/{user}/repos
-    func getRepoSourcery(
-        /* sourcery: Path */ user: String
-        ) -> [GithubRepo]
+    // @GET = /search/repositories
+    func searchRepo(
+        /* @Query */ q: String
+        ) -> RepoList
+}
+
+struct RepoList: Codable {
+    var items: [GithubRepo]
 }
 
 struct GithubRepo: Codable {
