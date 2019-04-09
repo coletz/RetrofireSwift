@@ -15,8 +15,8 @@ extension SessionManager {
 		{% for k, v in method.annotations %}
 		{% if k == "GET" or k == "POST" or k == "PUT" or k == "PATCH" or k == "DELETE" %}
 		let method: HTTPMethod = .{{ k|lowercase }}
-		{% if method.parameters|annotated:"url"|count == 1 %}
-		{% for param in method.parameters|annotated:"url" %}
+		{% if method.parameters|annotated:"Url"|count == 1 %}
+		{% for param in method.parameters|annotated:"Url" %}
 		let url = {{ param.name }}
 		{% endfor %}
 		{% else %}
@@ -26,13 +26,13 @@ extension SessionManager {
 		{% endif %}
 		{% endfor %}
 		{% for param in method.parameters|annotated:"Path" %}
-			.replacePathParameter(path: "{{ param.name }}", variable: {{ param.name }})
+			.replacePathParameter(path: "{% if param.annotations.Path != 1 %}{{ param.annotations.Path }}{% else %}{{ param.name }}{% endif %}", variable: {{ param.name }})
 		{% endfor %}
 		var urlComponent = URLComponents(string: url)!
 		{% if method.parameters|annotated:"Query"|count > 0 %}
 		var queryStringParam: [String:String] = [:]
 		{% for param in method.parameters|annotated:"Query" %}
-		queryStringParam["{{ param.name }}"] = {{ param.name }}
+		queryStringParam["{% if param.annotations.Query != 1 %}{{ param.annotations.Query }}{% else %}{{ param.name }}{% endif %}"] = {{ param.name }}
 		{% endfor %}
 		let queryItems = queryStringParam.map  { URLQueryItem(name: $0.key, value: $0.value) }
 		urlComponent.queryItems = queryItems
@@ -40,15 +40,24 @@ extension SessionManager {
 
 		var request = try! URLRequest(url: urlComponent.url!, method: method)
 		
-		{% for param in method.parameters %}
-		{% if param|annotated:"Body" %}
+		{% if method.parameters|annotated:"Header"|count > 0 or method.parameters|annotated:"Body"|count > 0 %}
+		var headers: [String: String] = [:]
+		request.allHTTPHeaderFields?.forEach { headers[$0.key] = $0.value }
+
+		{% for param in method.parameters|annotated:"Body" %}
 		let body = try! JSONEncoder().encode({{ param.name }})
-		let headers = [ "Content-Type": "application/json" ]
+		headers["Content-Type"] = "application/json"
 		request.httpMethod = "POST"
 		request.httpBody = body
-		request.allHTTPHeaderFields = headers
-		{% endif %}
 		{% endfor %}
+
+		{% for param in method.parameters|annotated:"Header" %}
+		headers["{{ param.annotations.Header }}"] = {{ param.name }}
+		{% endfor %}
+
+		request.allHTTPHeaderFields = headers
+		
+		{% endif %}
 		
 		{% if not method.annotations.responseType or method.annotations.responseType == "json"%}
 		self.request(request)

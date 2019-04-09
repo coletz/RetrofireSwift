@@ -38,7 +38,8 @@ extension SessionManager {
 			}
 	}
 	func searchRepo(
-		q: String,
+		query: String,
+		token: String,
 		_ completion: @escaping (RepoList?, RetrofireError?) -> Void
 	){
 
@@ -46,11 +47,18 @@ extension SessionManager {
 		let url =  "\(RetrofireConfig.fullUrl)/search/repositories"
 		var urlComponent = URLComponents(string: url)!
 		var queryStringParam: [String:String] = [:]
-		queryStringParam["q"] = q
+		queryStringParam["q"] = query
 		let queryItems = queryStringParam.map  { URLQueryItem(name: $0.key, value: $0.value) }
 		urlComponent.queryItems = queryItems
 
 		var request = try! URLRequest(url: urlComponent.url!, method: method)
+		var headers: [String: String] = [:]
+		request.allHTTPHeaderFields?.forEach { headers[$0.key] = $0.value }
+
+
+		headers["Authorization"] = token
+
+		request.allHTTPHeaderFields = headers
 		self.request(request)
 			.validate(statusCode: 200..<300)
 			.validate(contentType: ["application/json"])

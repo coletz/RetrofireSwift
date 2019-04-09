@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'RetrofireSwift'
-  s.version          = '0.3.0'
+  s.version          = '0.3.1'
   s.summary          = 'A type-safe HTTP client for Swift, inspired by Retrofit'
 
   s.description      = <<-DESC
@@ -31,5 +31,5 @@ Pod::Spec.new do |s|
   s.resources = [ 'retrofire.sh', 'Templates/*.stencil' ]
   
   s.dependency 'Alamofire'
-  s.dependency 'SourceryForRetrofire', '0.16.0-sfr-5'
+  s.dependency 'SourceryForRetrofire', '0.16.0-sfr-6'
 end

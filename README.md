@@ -22,7 +22,7 @@ Right now the only official way to install this library is by using [CocoaPods](
 - Add the following line to your Podfile:
 
 ```ruby
-pod 'RetrofireSwift', '0.3.0' # Since this pod is not stable you need to specify its version
+pod 'RetrofireSwift', '0.3.1' # Since this pod is not stable you need to specify its version
 ```
 
 - Run `pod install`
@@ -114,7 +114,9 @@ Inline:
 Remember to surround the variable in your endpoint with curly brakets:
 `// @GET = /users/{user}/repos`
 
-RetrofireSwift will replace all the occurrence of the word in the brakets with a variable with **exactly** the same name! 
+RetrofireSwift will replace all the occurrence of the word in the brakets with a variable with **exactly** the same name!
+If you need to set a different name between your variable and the actual path parameter, you can simply specify the name after an equal sign: `/* @Path = different_name */ user: String`. In this way you can have an endpoint like `/users/{different_name}/repos` without changing the function signature
+
 
 **End result:**
 ```swift
@@ -141,6 +143,7 @@ Inline:
 Endpoint doesn't need any modification, query parameters are added after the endpoint automatically
 
 RetrofireSwift will add all the parameters with **exactly** the same name as your parameter!
+If you need to set a different name between your variable and the actual path parameter, you can simply specify the name after an equal sign: `/* @Query = q */ query: String`. In this way you can call an endpoint like `/search/repositories?q=test` maintaining a meaningful name for your function's parameter
 
 **End result:**
 ```swift
@@ -188,10 +191,21 @@ SessionManager.default.postSample(body: req) {...}
 ```
 The function above will call `/posts` with a this json body: `{"title": "Sample", "body": "Full body", "userId": 1}`
 
+### Adding an @Header parameter
 
-### Adding @Header parameter
+In order to add an header parameter to your request you just need to add a parameter to your swift function, with a comment on the same line containing the `@Header` keyword, an equal sign and the header name. You can put the comment before or after the parameter:
+Before:
+`/* @Header = Authorization */ token: String`
 
-Right now (19/03/2018) it is not possible to add @Header parameters. I hope to add this in the next few days.
+After:
+`token: String /* @Header = Authorization */`
+
+Inline:
+`token: String // @Header = Authorization`
+
+### Adding more headers using @Headers
+
+Right now (09/04/2019) it is not possible to more headers using @Headers. Anyway you can use multiple @Header annotation on the same function if you need more parameters
 
 ## Author
 
