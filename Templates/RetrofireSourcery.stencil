@@ -62,21 +62,26 @@ extension SessionManager {
 		request.allHTTPHeaderFields = headers
 		
 		{% endif %}
-		
-		{% if not method.annotations.responseType or method.annotations.responseType == "json"%}
+
+		{% if method.unwrappedReturnTypeName == "Void" or method.unwrappedReturnTypeName == "" %}
+		self.request(request)
+			.validate(statusCode: 200..<300)
+			.responseData { response in
+				guard response.result.isSuccess else {
+					completion(response.response?.statusCode, .server(text: String(describing: response.result.error)))
+					return
+				}
+				completion(response.response?.statusCode, .server(text: String(describing: response.result.error)))
+			}
+		{% elif not method.annotations.responseType or method.annotations.responseType == "json"%}
 		self.request(request)
 			.validate(statusCode: 200..<300)
 			.validate(contentType: ["application/json"])
 			.responseJSON { response in
 				guard response.result.isSuccess else {
-					{% if method.unwrappedReturnTypeName != "Void" and method.unwrappedReturnTypeName != "" %}
 					completion(nil, .server(text: String(describing: response.result.error)))
-					{% else %}
-					completion(response.response?.statusCode, .server(text: String(describing: response.result.error)))
-					{% endif %}
 					return
 				}
-				{% if method.unwrappedReturnTypeName != "Void" and method.unwrappedReturnTypeName != "" %}
 				if let data = response.data {
 					if let jsonObj = try? JSONDecoder().decode({{ method.unwrappedReturnTypeName }}.self, from: data){
 						completion(jsonObj, nil)
@@ -86,9 +91,6 @@ extension SessionManager {
 				} else {
 					completion(nil, .emptyResponse)
 				}
-				{% else %}
-				completion(response.response?.statusCode, .server(text: String(describing: response.result.error)))
-				{% endif %}
 			}
 		{% else %}
 

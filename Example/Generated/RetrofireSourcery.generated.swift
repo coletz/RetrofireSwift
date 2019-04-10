@@ -18,6 +18,7 @@ extension SessionManager {
 		var urlComponent = URLComponents(string: url)!
 
 		var request = try! URLRequest(url: urlComponent.url!, method: method)
+
 		self.request(request)
 			.validate(statusCode: 200..<300)
 			.validate(contentType: ["application/json"])
@@ -59,6 +60,7 @@ extension SessionManager {
 		headers["Authorization"] = token
 
 		request.allHTTPHeaderFields = headers
+
 		self.request(request)
 			.validate(statusCode: 200..<300)
 			.validate(contentType: ["application/json"])
