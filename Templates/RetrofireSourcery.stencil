@@ -71,9 +71,9 @@ extension SessionManager {
 					completion(response.response?.statusCode, .server(text: String(describing: response.result.error)))
 					return
 				}
-				completion(response.response?.statusCode, .server(text: String(describing: response.result.error)))
+				completion(response.response?.statusCode, nil)
 			}
-		{% elif not method.annotations.responseType or method.annotations.responseType == "json"%}
+		{% elif not method.annotations.responseType or method.annotations.responseType == "json" %}
 		self.request(request)
 			.validate(statusCode: 200..<300)
 			.validate(contentType: ["application/json"])
