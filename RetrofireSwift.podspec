@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'RetrofireSwift'
-  s.version          = '0.3.1'
+  s.version          = '0.3.2'
   s.summary          = 'A type-safe HTTP client for Swift, inspired by Retrofit'
 
   s.description      = <<-DESC

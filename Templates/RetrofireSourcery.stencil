@@ -9,7 +9,11 @@ extension SessionManager {
 		{% for param in method.parameters %}
 		{{ param.name }}: {{ param.typeName }},
 		{% endfor %}
-		_ completion: @escaping ({{ method.returnTypeName }}?, RetrofireError?) -> Void
+		{% if method.unwrappedReturnTypeName != "Void" and method.unwrappedReturnTypeName != "" %}
+		_ completion: @escaping ({{ method.unwrappedReturnTypeName }}?, RetrofireError?) -> Void
+		{% else %}
+		_ completion: @escaping (Int?, RetrofireError?) -> Void
+		{% endif %}
 	){
 
 		{% for k, v in method.annotations %}
@@ -65,12 +69,16 @@ extension SessionManager {
 			.validate(contentType: ["application/json"])
 			.responseJSON { response in
 				guard response.result.isSuccess else {
+					{% if method.unwrappedReturnTypeName != "Void" and method.unwrappedReturnTypeName != "" %}
 					completion(nil, .server(text: String(describing: response.result.error)))
+					{% else %}
+					completion(response.response?.statusCode, .server(text: String(describing: response.result.error)))
+					{% endif %}
 					return
 				}
-				
+				{% if method.unwrappedReturnTypeName != "Void" and method.unwrappedReturnTypeName != "" %}
 				if let data = response.data {
-					if let jsonObj = try? JSONDecoder().decode({{ method.returnTypeName }}.self, from: data){
+					if let jsonObj = try? JSONDecoder().decode({{ method.unwrappedReturnTypeName }}.self, from: data){
 						completion(jsonObj, nil)
 					} else {
 						completion(nil, .unparsableJson)
@@ -78,6 +86,9 @@ extension SessionManager {
 				} else {
 					completion(nil, .emptyResponse)
 				}
+				{% else %}
+				completion(response.response?.statusCode, .server(text: String(describing: response.result.error)))
+				{% endif %}
 			}
 		{% else %}
 
@@ -88,14 +99,14 @@ extension SessionManager {
 					completion(nil, .server(text: String(describing: response.result.error)))
 					return
 				}
-	            
-	            if let data = response.data {
-	                completion(data, nil)
-	            } else {
-	                completion(nil, .emptyResponse)
-	            }
-	            return
-        }
+				
+				if let data = response.data {
+					completion(data, nil)
+				} else {
+					completion(nil, .emptyResponse)
+				}
+				return
+		}
 		{% endif %}
 	}
 	{% endfor %}
